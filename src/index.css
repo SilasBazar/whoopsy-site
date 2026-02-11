@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-purple: #a855f7;
+  --color-brand-green: #22c55e;
+  --color-brand-zinc: #09090b;
+  
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--color-brand-zinc);
+  color: #e4e4e7;
+  font-family: var(--font-mono);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-heading {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+}
+
+.glitch-text:hover {
+  text-shadow: 3px 3px #a855f7, -3px -3px #22c55e;
+  transition: all 0.1s;
+}
+
+.btn-primary {
+  background-color: #a855f7;
+  color: white;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-primary:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0px #ffffff;
+}
+
+.btn-secondary {
+  border: 2px solid #3f3f46;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: white;
+  background-color: rgba(255,255,255,0.05);
+}
+
+.border-brutal {
+  border: 2px solid #3f3f46;
+}
+
+.stat-card {
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: rotate(-2deg) scale(1.02);
+  z-index: 10;
+}
+
+/* Animations from the HTML file */
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
