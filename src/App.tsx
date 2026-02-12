@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 function App() {
   const [activePage, setActivePage] = useState('home')
